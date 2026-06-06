@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Generator Anunțuri | Vali Handyman</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        @media (max-width: 968px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FORMA DE ADĂUGARE */
+        .form-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .form-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .btn-add-foto {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-add-foto:hover {
+            background: #764ba2;
+        }
+
+        .foto-item {
+            background: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+
+        .foto-item input {
+            margin-bottom: 8px;
+        }
+
+        .btn-remove {
+            background: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .btn-remove:hover {
+            background: #c82333;
+        }
+
+        .detalii-list {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .detaliu-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+            padding: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .detaliu-item input {
+            flex: 1;
+            margin: 0;
+        }
+
+        .detaliu-item button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* BUTOANE */
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-submit {
+            background: #28a745;
+            color: white;
+            grid-column: 1 / -1;
+        }
+
+        .btn-submit:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-reset {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-reset:hover {
+            background: #5a6268;
+        }
+
+        /* LISTA ANUNȚURI */
+        .list-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .list-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .anunturi-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .anunt-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .anunt-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .anunt-item.active {
+            background: #e7f3ff;
+            border-left-color: #764ba2;
+        }
+
+        .anunt-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .anunt-subtitle {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .anunt-price {
+            font-size: 0.9rem;
+            color: #28a745;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .btn-edit {
+            background: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+
+        .btn-edit:hover {
+            background: #0056b3;
+        }
+
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        .btn-delete:hover {
+            background: #c82333;
+        }
+
+        /* MESAJE */
+        .message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        /* EXPORT */
+        .export-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 2px dashed #667eea;
+            text-align: center;
+        }
+
+        .export-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .btn-export {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-export:hover {
+            background: #764ba2;
+        }
+
+        .code-block {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🔧 Admin Panel - Generator Anunțuri</h1>
+        <p>Gestionează și adaugă anunțuri în baza de date</p>
+    </header>
+
+    <div class="content">
+        <!-- FORMULAR -->
+        <div class="form-section">
+            <h2>➕ Adaugă Anunț Nou</h2>
+
+            <div class="message" id="message"></div>
+
+            <form id="anuntForm">
+                <div class="form-group">
+                    <label for="id">ID (slug)*</label>
+                    <input type="text" id="id" name="id" required placeholder="ex: montaj-usa">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="titlu">Titlu*</label>
+                        <input type="text" id="titlu" name="titlu" required placeholder="ex: Montaj Ușile">
+                    </div>
+                    <div class="form-group">
+                        <label for="subtitlu">Subtitlu</label>
+                        <input type="text" id="subtitlu" name="subtitlu" placeholder="ex: Rapid și Sigur">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="locatie">Locație*</label>
+                    <input type="text" id="locatie" name="locatie" required placeholder="Cluj-Napoca și împrejurimi">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pret">Preț*</label>
+                        <input type="text" id="pret" name="pret" required placeholder="ex: 350 RON">
+                    </div>
+                    <div class="form-group">
+                        <label for="pretRange">Preț Range*</label>
+                        <input type="text" id="pretRange" name="pretRange" required placeholder="ex: 350 - 1500 RON">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriere">Descriere 1*</label>
+                    <textarea id="descriere" name="descriere" required placeholder="Prima descriere a serviciului..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriere2">Descriere 2</label>
+                    <textarea id="descriere2" name="descriere2" placeholder="A doua descriere a serviciului..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="prioritate">Prioritate in sitemap (0-1)</label>
+                    <input type="number" id="prioritate" name="prioritate" min="0" max="1" step="0.1" value="0.8">
+                </div>
+
+                <div class="form-group">
+                    <label for="metaDescription">Meta Descriere (SEO)</label>
+                    <textarea id="metaDescription" name="metaDescription" placeholder="Descrierea pentru Google..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="metaKeywords">Meta Keywords (SEO)</label>
+                    <input type="text" id="metaKeywords" name="metaKeywords" placeholder="keyword1, keyword2, keyword3">
+                </div>
+
+                <!-- DETALII -->
+                <div class="form-group">
+                    <label>Detalii</label>
+                    <div class="detalii-list" id="detaliiList"></div>
+                    <button type="button" class="btn-add-foto" onclick="adaugaDetaliu()">+ Adaugă Detaliu</button>
+                </div>
+
+                <!-- POZE -->
+                <div class="form-group">
+                    <label>Poze</label>
+                    <div id="pozeFoto"></div>
+                    <button type="button" class="btn-add-foto" onclick="adaugaFoto()">+ Adaugă Fotografie</button>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-submit">✅ Salvează Anunț</button>
+                    <button type="reset" class="btn btn-reset">🔄 Golește Formular</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- LISTA ANUNȚURI -->
+        <div class="list-section">
+            <h2>📋 Lista Anunțuri</h2>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cauta anunt...">
+            </div>
+
+            <div class="anunturi-list" id="anunturiList">
+                <p style="text-align: center; color: #999;">Încarcă anunțurile...</p>
+            </div>
+
+            <div class="export-section">
+                <h3>📥 Export & Import</h3>
+                <button class="btn-export" onclick="exportJSON()">📥 Descarcă JSON</button>
+                <button class="btn-export" onclick="document.getElementById('importFile').click()">📤 Încarcă JSON</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;">
+                <button class="btn-export" onclick="copyCodGitHub()">📋 Cod Commit GitHub</button>
+                <div class="code-block" id="codeBlock" style="display: none;">
+                    <code id="codeContent"></code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let anunturi = [];
+    let editIndex = null;
+
+    // Încarcă anunțuri din localStorage
+    function incarcaAnunturi() {
+        const saved = localStorage.getItem('anunturi');
+        if (saved) {
+            anunturi = JSON.parse(saved);
+            afiseazaAnunturi();
+        } else {
+            incarcaFromFile();
+        }
+    }
+
+    // Încarcă din anunturi.json
+    function incarcaFromFile() {
+        fetch('anunturi.json')
+            .then(res => res.json())
+            .then(data => {
+                anunturi = data;
+                localStorage.setItem('anunturi', JSON.stringify(anunturi));
+                afiseazaAnunturi();
+            })
+            .catch(err => {
+                afiseazaMesaj('Eroare la încarcarea anunțurilor: ' + err, 'error');
+            });
+    }
+
+    // Afișează anunțuri în lista
+    function afiseazaAnunturi(filter = '') {
+        const list = document.getElementById('anunturiList');
+        const filtered = anunturi.filter(a => 
+            a.titlu.toLowerCase().includes(filter.toLowerCase()) ||
+            a.id.toLowerCase().includes(filter.toLowerCase())
+        );
+
+        if (filtered.length === 0) {
+            list.innerHTML = '<p style="text-align: center; color: #999;">Niciun anunț găsit</p>';
+            return;
+        }
+
+        list.innerHTML = filtered.map((anunt, idx) => `
+            <div class="anunt-item" onclick="incarcaInFormular(${anunturi.indexOf(anunt)})">
+                <div class="anunt-title">${anunt.titlu}</div>
+                <div class="anunt-subtitle">${anunt.subtitlu || ''}</div>
+                <div class="anunt-price">💰 ${anunt.pret}</div>
+                <button type="button" class="btn-edit" onclick="incarcaInFormular(${anunturi.indexOf(anunt)}); event.stopPropagation();">Edit</button>
+                <button type="button" class="btn-delete" onclick="stergeAnunt(${anunturi.indexOf(anunt)}); event.stopPropagation();">Delete</button>
+            </div>
+        `).join('');
+    }
+
+    // Adaugă detaliu
+    function adaugaDetaliu(text = '') {
+        const list = document.getElementById('detaliiList');
+        const item = document.createElement('div');
+        item.className = 'detaliu-item';
+        item.innerHTML = `
+            <input type="text" value="${text}" class="detaliu-input">
+            <button type="button" onclick="this.parentElement.remove()">-</button>
+        `;
+        list.appendChild(item);
+    }
+
+    // Adaugă fotografie
+    function adaugaFoto(src = '', alt = '') {
+        const list = document.getElementById('pozeFoto');
+        const item = document.createElement('div');
+        item.className = 'foto-item';
+        item.innerHTML = `
+            <input type="text" placeholder="URL imagine" value="${src}" class="foto-src">
+            <input type="text" placeholder="Text alternativ" value="${alt}" class="foto-alt">
+            <button type="button" class="btn-remove" onclick="this.parentElement.remove()">Șterge</button>
+        `;
+        list.appendChild(item);
+    }
+
+    // Salvează anunț
+    document.getElementById('anuntForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const detalii = [];
+        document.querySelectorAll('.detaliu-input').forEach(input => {
+            if (input.value) detalii.push(input.value);
+        });
+
+        const poze = [];
+        document.querySelectorAll('.foto-src').forEach((input, idx) => {
+            if (input.value) {
+                poze.push({
+                    src: input.value,
+                    alt: document.querySelectorAll('.foto-alt')[idx].value || ''
+                });
+            }
+        });
+
+        const anunt = {
+            id: document.getElementById('id').value,
+            titlu: document.getElementById('titlu').value,
+            subtitlu: document.getElementById('subtitlu').value,
+            locatie: document.getElementById('locatie').value,
+            pret: document.getElementById('pret').value,
+            pretRange: document.getElementById('pretRange').value,
+            descriere: document.getElementById('descriere').value,
+            descriere2: document.getElementById('descriere2').value,
+            prioritate: parseFloat(document.getElementById('prioritate').value),
+            detalii: detalii,
+            poze: poze,
+            metaDescription: document.getElementById('metaDescription').value,
+            metaKeywords: document.getElementById('metaKeywords').value,
+            url: `https://servicii.vali-handyman.com/${document.getElementById('id').value}.html`
+        };
+
+        if (editIndex !== null) {
+            anunturi[editIndex] = anunt;
+            afiseazaMesaj('✅ Anunț actualizat cu succes!', 'success');
+            editIndex = null;
+        } else {
+            anunturi.push(anunt);
+            afiseazaMesaj('✅ Anunț adăugat cu succes!', 'success');
+        }
+
+        localStorage.setItem('anunturi', JSON.stringify(anunturi));
+        afiseazaAnunturi();
+        this.reset();
+        document.getElementById('detaliiList').innerHTML = '';
+        document.getElementById('pozeFoto').innerHTML = '';
+    });
+
+    // Încarcă în formular
+    function incarcaInFormular(idx) {
+        editIndex = idx;
+        const anunt = anunturi[idx];
+
+        document.getElementById('id').value = anunt.id;
+        document.getElementById('titlu').value = anunt.titlu;
+        document.getElementById('subtitlu').value = anunt.subtitlu || '';
+        document.getElementById('locatie').value = anunt.locatie;
+        document.getElementById('pret').value = anunt.pret;
+        document.getElementById('pretRange').value = anunt.pretRange;
+        document.getElementById('descriere').value = anunt.descriere;
+        document.getElementById('descriere2').value = anunt.descriere2 || '';
+        document.getElementById('prioritate').value = anunt.prioritate;
+        document.getElementById('metaDescription').value = anunt.metaDescription || '';
+        document.getElementById('metaKeywords').value = anunt.metaKeywords || '';
+
+        document.getElementById('detaliiList').innerHTML = '';
+        anunt.detalii.forEach(d => adaugaDetaliu(d));
+
+        document.getElementById('pozeFoto').innerHTML = '';
+        anunt.poze.forEach(p => adaugaFoto(p.src, p.alt));
+
+        window.scrollTo(0, 0);
+        afiseazaMesaj('Editezi anunț: ' + anunt.titlu, 'info');
+    }
+
+    // Șterge anunț
+    function stergeAnunt(idx) {
+        if (confirm('Ești sigur că vrei să ștergi acest anunț?')) {
+            anunturi.splice(idx, 1);
+            localStorage.setItem('anunturi', JSON.stringify(anunturi));
+            afiseazaAnunturi();
+            afiseazaMesaj('❌ Anunț șters!', 'success');
+        }
+    }
+
+    // Exportă JSON
+    function exportJSON() {
+        const json = JSON.stringify(anunturi, null, 2);
+        const blob = new Blob([json], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'anunturi.json';
+        a.click();
+    }
+
+    // Importă JSON
+    document.getElementById('importFile').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            try {
+                anunturi = JSON.parse(event.target.result);
+                localStorage.setItem('anunturi', JSON.stringify(anunturi));
+                afiseazaAnunturi();
+                afiseazaMesaj('✅ Anunțuri importate cu succes!', 'success');
+            } catch (err) {
+                afiseazaMesaj('Eroare la import: ' + err, 'error');
+            }
+        };
+        reader.readAsText(file);
+    });
+
+    // Copiază cod commit GitHub
+    function copyCodGitHub() {
+        const json = JSON.stringify(anunturi, null, 2);
+        const code = `1. Mergi pe: https://github.com/roprim/servicii-cluj/blob/main/anunturi.json
+2. Click "Edit this file" (pencil icon)
+3. Înlocuiește tot conținutul cu:
+
+${json}
+
+4. Click "Commit changes"
+5. Scrie mesaj: "Update: Adaugă/Modifică anunțuri"
+6. Click "Commit"`;
+
+        document.getElementById('codeBlock').style.display = 'block';
+        document.getElementById('codeContent').textContent = code;
+        
+        // Copiază în clipboard
+        navigator.clipboard.writeText(code).then(() => {
+            afiseazaMesaj('✅ Cod copiat în clipboard!', 'success');
+        });
+    }
+
+    // Afișează mesaj
+    function afiseazaMesaj(text, type) {
+        const msg = document.getElementById('message');
+        msg.textContent = text;
+        msg.className = `message show ${type}`;
+        setTimeout(() => msg.classList.remove('show'), 5000);
+    }
+
+    // Cauta
+    document.getElementById('searchInput').addEventListener('input', function() {
+        afiseazaAnunturi(this.value);
+    });
+
+    // Încarcă anunțuri la start
+    incarcaAnunturi();
+</script>
+
+</body>
+</html>
