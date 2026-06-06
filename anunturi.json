@@ -35,6 +35,29 @@
     "metaKeywords": "montaj cabina dus cluj, reparații cabine duș, paravan duș cluj, hidromasaj cluj",
     "url": "https://servicii.vali-handyman.com/montaj-cabina-dus.html"
   },
+  ,
+  {
+    "id": "reparatii-dulap-usi-glisante",
+    "titlu": "Reparații Dulap cu Ușile Glisante",
+    "subtitlu": "Reparații Profesionale",
+    "locatie": "Cluj-Napoca și împrejurimi",
+    "pret": "100 RON",
+    "pretRange": "100 - 400 RON",
+    "descriere": "Reparații profesionale pentru dulapuri cu ușile glisante. Inlocuire role, șine și ajustări precise.",
+    "descriere2": "Îți restituesc funcționalitatea perfectă dulap cu ușile glisante.",
+    "prioritate": 0.8,
+    "detalii": [
+      "Înlocuire role glisante",
+      "Reparație șine",
+      "Ajustare precise",
+      "Inlocuire balamale",
+      "Garanție lucrare"
+    ],
+    "poze": [],
+    "metaDescription": "Reparații dulap cu ușile glisante Cluj-Napoca. Servicii profesionale cu garanție.",
+    "metaKeywords": "reparatii dulap, usi glisante, reparatii mobilă cluj",
+    "url": "https://servicii.vali-handyman.com/reparatii-dulap-usi-glisante.html"
+  }
   {
     "id": "montaj-parchet",
     "titlu": "Montaj Parchet și Laminat",
