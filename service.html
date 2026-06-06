@@ -1,1 +1,439 @@
 
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Meta SEO - Vor fi populate dinamic din JSON -->
+    <meta name="description" content="Servicii profesionale - Vali Handyman">
+    <meta name="keywords" content="servicii handyman cluj">
+    <meta name="author" content="Vali Handyman">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Vali Handyman">
+    <meta property="og:locale" content="ro_RO">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usznuy8+Qw/oXgUjBoMlQQsyukDObBaI7FFzJpYXjohnjuDiTp9bAApBwq5/Nw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" id="schemaMarkup">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Serviciu",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Vali Handyman"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cluj-Napoca"
+      }
+    }
+    </script>
+
+    <title>Serviciu Profesional | Vali Handyman</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #a0bcb3;
+            color: #f4eeee;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #043255;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #56bbf5;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: rgb(244, 241, 241);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-info h2 {
+            color: #0bf74e;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f4f7f6;
+            padding-bottom: 5px;
+        }
+
+        .description {
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .gallery {
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 200px;
+            border-radius: 6px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+
+        .sidebar {
+            background-color: #12365b;
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            height: fit-content;
+        }
+
+        .price-box {
+            text-align: center;
+            background: #e6fffa;
+            border: 1px solid #319795;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: #133839;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #234e52;
+        }
+
+        .details-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .details-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #94f2c0;
+            display: flex;
+            align-items: center;
+        }
+
+        .details-list li::before {
+            content: "✓";
+            color: #1a824a;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: #0b753d;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #2f855a;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #56bbf5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #56bbf5;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="content">
+        <a href="index.html" class="back-link">← Înapoi la servicii</a>
+        
+        <div id="serviceContent">
+            <div class="loading">⏳ Se încarcă serviciul...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="contact" style="margin-top: 30px; background: #043255; color: #f4eeee; padding: 30px; border-radius: 8px; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+        <h4 style="color: #0bf74e; margin-bottom: 15px;">Vali Handyman</h4>
+        <p style="margin-bottom: 15px;">Servicii profesionale de handyman în Cluj-Napoca</p>
+        <div style="margin-bottom: 15px;">
+            <p><i class="fa-solid fa-location-dot"></i> Cluj-Napoca, România</p>
+            <p><i class="fa-brands fa-whatsapp"></i> +40 755 873 335</p>
+            <p><i class="fa-solid fa-envelope"></i> info@servicii.vali-handyman.com</p>
+        </div>
+        <p style="font-size: 0.9rem; opacity: 0.8;">&copy; 2026 Vali Handyman. Toate drepturile rezervate.</p>
+    </div>
+</footer>
+
+<script>
+    // Obține ID-ul din URL
+    function getServiceId() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('id');
+    }
+
+    // Încarcă serviciul din JSON
+    async function loadService() {
+        const serviceId = getServiceId();
+        
+        if (!serviceId) {
+            document.getElementById('serviceContent').innerHTML = '<div class="error">❌ Serviciu nu găsit. ID lipsă din URL.</div>';
+            return;
+        }
+
+        try {
+            const response = await fetch('anunturi.json');
+            const services = await response.json();
+            const service = services.find(s => s.id === serviceId);
+
+            if (!service) {
+                document.getElementById('serviceContent').innerHTML = '<div class="error">❌ Serviciu nu găsit.</div>';
+                return;
+            }
+
+            renderService(service);
+            updateMetaTags(service);
+            updateSchema(service);
+        } catch (error) {
+            document.getElementById('serviceContent').innerHTML = `<div class="error">❌ Eroare la încarcarea serviciului: ${error.message}</div>`;
+        }
+    }
+
+    // Afișează serviciul
+    function renderService(service) {
+        const html = `
+            <header>
+                <h1>${service.titlu}</h1>
+                <div class="location-badge">📍 ${service.locatie}</div>
+            </header>
+
+            <div class="content">
+                <div class="grid-layout">
+                    <div class="main-info">
+                        <h2>📋 Descriere Serviciu</h2>
+                        <div class="description">
+                            <p>${service.descriere}</p>
+                            ${service.descriere2 ? `<p style="margin-top: 15px;">${service.descriere2}</p>` : ''}
+                        </div>
+
+                        ${service.poze && service.poze.length > 0 ? `
+                            <h2>📸 Galerie</h2>
+                            <div class="gallery">
+                                <div class="gallery-grid">
+                                    ${service.poze.map(poza => `
+                                        <img src="${poza.src}" alt="${poza.alt}" class="gallery-item">
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+                    </div>
+
+                    <aside class="sidebar">
+                        <div class="price-box">
+                            <div class="price-label">💰 Preț de pornire</div>
+                            <div class="price-value">${service.pret}</div>
+                            <div style="font-size: 0.85rem; color: #666; margin-top: 5px;">${service.pretRange}</div>
+                        </div>
+
+                        ${service.detalii && service.detalii.length > 0 ? `
+                            <h3 style="color: #94f2c0; margin-bottom: 15px;">✨ Avantaje</h3>
+                            <ul class="details-list">
+                                ${service.detalii.map(detail => `<li>${detail}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+
+                        <a href="tel:+40755873335" class="cta-button">
+                            📞 Sună pentru Programare
+                        </a>
+                        <a href="https://wa.me/40755873335?text=Mă%20interesează%20serviciul:%20${encodeURIComponent(service.titlu)}" target="_blank" class="cta-button" style="background-color: #25D366; margin-top: 10px;">
+                            💬 WhatsApp
+                        </a>
+                    </aside>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('serviceContent').innerHTML = html;
+    }
+
+    // Actualizează meta taguri
+    function updateMetaTags(service) {
+        // Title
+        document.title = `${service.titlu} | Vali Handyman Cluj-Napoca`;
+        
+        // Description
+        document.querySelector('meta[name="description"]').setAttribute('content', service.metaDescription || service.descriere.substring(0, 160));
+        
+        // Keywords
+        document.querySelector('meta[name="keywords"]').setAttribute('content', service.metaKeywords || '');
+        
+        // Open Graph
+        document.querySelector('meta[property="og:url"]').setAttribute('content', service.url);
+        document.querySelector('meta[property="og:title"]').setAttribute('content', service.titlu);
+        document.querySelector('meta[property="og:description"]').setAttribute('content', service.metaDescription || service.descriere.substring(0, 160));
+        if (service.poze && service.poze.length > 0) {
+            document.querySelector('meta[property="og:image"]').setAttribute('content', service.poze[0].src);
+        }
+        
+        // Twitter
+        document.querySelector('meta[name="twitter:title"]').setAttribute('content', service.titlu);
+        document.querySelector('meta[name="twitter:description"]').setAttribute('content', service.metaDescription || service.descriere.substring(0, 160));
+        if (service.poze && service.poze.length > 0) {
+            document.querySelector('meta[name="twitter:image"]').setAttribute('content', service.poze[0].src);
+        }
+        
+        // Canonical
+        document.querySelector('link[rel="canonical"]').setAttribute('href', service.url);
+    }
+
+    // Actualizează Schema.org
+    function updateSchema(service) {
+        const schema = {
+            "@context": "https://schema.org/",
+            "@type": "Service",
+            "name": service.titlu,
+            "description": service.descriere,
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Vali Handyman",
+                "telephone": "+40755873335",
+                "email": "info@servicii.vali-handyman.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Cluj-Napoca",
+                    "addressRegion": "Cluj",
+                    "addressCountry": "RO"
+                }
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": service.locatie
+            },
+            "priceRange": service.pretRange,
+            "image": service.poze && service.poze.length > 0 ? service.poze[0].src : ""
+        };
+
+        document.getElementById('schemaMarkup').textContent = JSON.stringify(schema);
+    }
+
+    // Încarcă serviciul la deschidere
+    window.addEventListener('DOMContentLoaded', loadService);
+</script>
+
+</body>
+</html>
