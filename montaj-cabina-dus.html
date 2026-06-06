@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaj și Reparatii Cabine Duș | Servicii Profesionale</title>
+    <style>
+        /* Resetare și stiluri globale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #a0bcb3;
+            color: #f4eeee;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #043255;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Header / Secțiunea Principală */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #56bbf5;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: rgb(244, 241, 241);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Conținutul Anunțului */
+        .content {
+            padding: 30px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Secțiunea Stânga: Descriere și Poze */
+        .main-info h2 {
+            color: #0bf74e;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f4f7f6;
+            padding-bottom: 5px;
+        }
+
+        .description {
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Galerie Poze */
+        .gallery {
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 150px;
+            background-color: #8a4b4b;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: bold;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+
+        /* Secțiunea Dreapta: Preț și Detalii/Contact */
+        .sidebar {
+            background-color: #12365b;
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            height: fit-content;
+        }
+
+        .price-box {
+            text-align: center;
+            background: #e6fffa;
+            border: 1px solid #319795;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: #133839;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #234e52;
+        }
+
+        .details-list {
+            list-style: none;
+            margin-bottom: 25px;
+            color: #360395;
+        }
+
+        .details-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #94f2c0;
+            display: flex;
+            align-items: center;
+        }
+
+        .details-list li::before {
+            content: "✓";
+            color: #1a824a;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: #0b753d;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #2f855a;
+        }
+    </style>
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VALI <span>Handyman</span></a>
+            <nav aria-label="Navigație Principală">
+                <ul class="nav-links">
+                    <li><a href="#services">Servicii</a></li>
+                    <li><a href="#testimonials">Recenzii</a></li>
+                    <li><a href="#why-us">De ce noi</a></li>
+                    <li><a href="#faq">Întrebări frecvente</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="https://facebook.com/" target="_blank" aria-label="Vizitați pagina noastră de Facebook"><i class="fa-brands fa-facebook" style="font-size: 1.2rem;"></i></a></li>
+                </ul>
+            </nav>
+            <a href="tel:+40755873335" class="header-phone" aria-label="Sună la +40 755 873 335"><i class="fa-solid fa-phone"></i></a>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="grid-layout">
+
+            <h1>Montaj și Reparatii Cabine Duș – Profesional și Rapid</h1>
+        <div class="location-badge">Disponibil în: Cluj-Napoca și împrejurimi</div>
+            
+            <div class="main-info">
+                <h2>Descriere Serviciu</h2>
+                <div class="description">
+                    <p>Ofer servicii profesionale de montaj, înlocuire și reparații pentru orice tip de cabină de duș, walk-in, hidromasaj sau paravan de cadă. Cu o experiență vastă în domeniu, garantez o instalare hidroizolată corect, fără scurgeri de apă și finisaje de înaltă calitate.</p>
+                    <br>
+                    <p>Mă ocup de tot procesul: de la demontarea vechii cabine, pregătirea suprafeței, aplicarea stratului de silicon sanitar anti-mucegai, până la racordarea corectă la rețeaua de apă și scurgere.</p>
+                </div>
+
+                <h2>Poze Lucrări (Portofoliu)</h2>
+                <div class="gallery">
+                    <p style="font-size: 0.9rem; color: #666;">*Mai jos sunt exemple de cabine montate recent:</p>
+                    <div class="gallery-grid">
+                        <img class="gallery-item" src="assets/painting_decorating_optimized.jpg" alt="Montaj cabina dus">
+                        <img class="gallery-item" src="https://via.placeholder.com/300x200?text=Paravan+Walk-in" alt="Paravan Walk-in">
+                        <img class="gallery-item" src="https://via.placeholder.com/300x200?text=Detalii+Izolație" alt="Izolatie silicon sanitar">
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="price-box">
+                    <div class="price-label">Preț de pornire</div>
+                    <div class="price-value">350 RON</div>
+                </div>
+
+                <h3>Alte Detalii</h3>
+                <br>
+                <ul class="details-list">
+                    <li>Garanție pentru montaj</li>
+                    <li>Unelte profesionale</li>
+                    <li>Materiale de etanșare incluse</li>
+                    <li>Disponibilitate: Luni - Duminică</li>
+                    <li>Curățenie după lucrare</li>
+                </ul>
+
+                <a href="tel:0700000000" class="cta-button">Sunați pentru Programare</a>
+            </aside>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+	<footer id="contact">
+		<div class="container">
+			<div class="footer-grid">
+				<div class="footer-col">
+					<h4>Vali Handyman</h4>
+					<p>Servicii profesionale de vopsit și zugravit în Cluj-Napoca.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Contact</h4>
+					<ul>
+						<li><i class="fa-solid fa-location-dot text-primary"></i> Cluj-Napoca, România</li>
+						<li><i class="fa-brands fa-whatsapp text-primary"></i> +40 755 873 335</li>
+						<li><i class="fa-solid fa-envelope text-primary"></i> info@servicii.vali-handyman.com</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Linkuri</h4>
+					<ul>
+						<li><a href="index.html#services">Servicii</a></li>
+						<li><a href="index.html">Acasă</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2026 Vali Handyman. Toate drepturile rezervate.</p>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=https://servicii-handyman.ro/zugraveli-vopsit.html" class="fb-share" aria-label="Distribuie pe Facebook"><i class="fa-brands fa-facebook-f"></i> Distribuie</a>
+			</div>
+		</div>
+	</footer>
+<script src="main.js"></script>
+
+</body>
+</html>
