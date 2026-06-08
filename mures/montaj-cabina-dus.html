@@ -1,5 +1,3 @@
-
-```html
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -27,29 +25,53 @@
     <meta property="og:site_name" content="Vali Handyman">
     <meta property="og:locale" content="ro_RO">
     
-    <!-- Twitter Card -->
+   Am modificat codul paginii tale pentru a reflecta noua structură din folderul `mures`. Am adăugat `../` la toate căile către fișierele CSS, JavaScript, imagini și iconițe (pentru ca pagina să le poată accesa corect din folderul rădăcină) și am actualizat linkurile din meniu, footer și meta-taguri.
+
+Iată codul complet și actualizat pentru **`mures/montaj-cabina-dus.html`**:
+
+```html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="icon" href="../assets/favicon-vh.png" type="image/png">
+    <title>Montaj și Reparatii Cabine Duș | Servicii Profesionale Târgu Mureș</title>
+    <meta name="description" content="Servicii profesionale de montaj, reparații și înlocuire cabine duș în Târgu Mureș. Garanție montaj, materiale de etanșare incluse. Disponibil luni-duminică. Apelați acum!">
+    <meta name="keywords" content="montaj cabina dus targu mures, reparații cabine duș, paravan duș targu mures, hidromasaj targu mures, servicii profesionale">
+    <meta name="author" content="Vali Handyman">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://servicii.vali-handyman.ro/mures/montaj-cabina-dus.html">
+    <meta property="og:title" content="Montaj și Reparatii Cabine Duș | Servicii Profesionale Târgu Mureș">
+    <meta property="og:description" content="Montaj profesional cabine duș în Târgu Mureș cu garanție. Disponibil 7/7. De la 350 RON. Contactați-ne astazi!">
+    <meta property="og:image" content="https://servicii.vali-handyman.com/assets/cabina-dus1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Vali Handyman">
+    <meta property="og:locale" content="ro_RO">
+    
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://servicii.vali-handyman.ro/montaj-cabina-dus.html">
+    <meta name="twitter:url" content="https://servicii.vali-handyman.ro/mures/montaj-cabina-dus.html">
     <meta name="twitter:title" content="Montaj și Reparatii Cabine Duș | Servicii Profesionale">
     <meta name="twitter:description" content="Montaj profesional cabine duș în Târgu Mureș cu garanție. Disponibil 7/7.">
-    <meta name="twitter:image" content="https://servicii.vali-handyman.com/assets/cabina-dus1.png">
+    <meta name="twitter:image" content="https://servicii.vali-handyman.com/mures/..assets/cabina-dus1.png">
     
-    <!-- Canonical URL - Previne duplicate content -->
     <link rel="canonical" href="https://servicii.vali-handyman.com/mures/montaj-cabina-dus.html">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon-vh.png">
-    <link rel="apple-touch-icon" href="assets/cabina-dus1.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon-vh.png">
+    <link rel="apple-touch-icon" href="../assets/cabina-dus1.png">
     
-    <!-- Preconnect pentru performanță -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://via.placeholder.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     
-    <!-- Styluri CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usznuy8+Qw/oXgUjBoMlQQsyukDObBaI7FFzJpYXjohnjuDiTp9bAApBwq5/Nw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="index.css" media="all">
+    <link rel="stylesheet" href="../index.css" media="all">
     <style>
         /* Resetare și stiluri globale */
         * {
@@ -266,20 +288,16 @@
             background-color: #2f855a;
         }
     </style>
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
 
-    <!-- Schema.org JSON-LD - Structurate date pentru motoarele de căutare -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
       "@type": "LocalBusiness",
       "name": "Vali Handyman - Montaj Cabine Duș",
-      "image": "https://servicii.vali-handyman.com/assets/cabina-dus1.png",
+      "image": "https://servicii.vali-handyman.com/../assets/cabina-dus1.png",
       "description": "Servicii profesionale de montaj, reparații și înlocuire cabine duș în Târgu Mureș",
       "address": {
         "@type": "PostalAddress",
@@ -311,7 +329,6 @@
     }
     </script>
 
-    <!-- Schema.org JSON-LD pentru Serviciu -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -332,7 +349,6 @@
     }
     </script>
 
-    <!-- Breadcrumb Schema JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -354,22 +370,11 @@
           "@type": "ListItem",
           "position": 3,
           "name": "Montaj Cabine Duș",
-          "item": "https://servicii-vali.handyman.com/montaj-cabina-dus.html"
+          "item": "https://servicii.vali-handyman.com/mures/montaj-cabina-dus.html"
         }
       ]
     }
     </script>
-
-    <!-- Google Analytics (dacă doriți să adăugați tracking) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script> -->
-
-    
 </head>
 
 <body>
@@ -377,15 +382,15 @@
 <div class="container">
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">VALI <span>Handyman</span></a>
+            <a href="../index.html" class="logo">VALI <span>Handyman</span></a>
             <nav aria-label="Navigație Principală">
                 <ul class="nav-links">
-                    <li><a href="index.html#services">Servicii</a></li>
-                    <li><a href="index.html#testimonials">Recenzii</a></li>
-                    <li><a href="index.html#why-us">De ce noi</a></li>
-                    <li><a href="index.html#faq">Întrebări frecvente</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <li><a href="index.htmlgallery.html">Galerie</a></li>
+                    <li><a href="../index.html#services">Servicii</a></li>
+                    <li><a href="../index.html#testimonials">Recenzii</a></li>
+                    <li><a href="../index.html#why-us">De ce noi</a></li>
+                    <li><a href="../index.html#faq">Întrebări frecvente</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../gallery.html">Galerie</a></li>
                     <li><a href="https://facebook.com/profile.php?id=61590550021513" target="_blank" aria-label="Vizitați pagina noastră de Facebook"><i class="fa-brands fa-facebook" style="font-size: 1.2rem;"></i></a></li>
                 </ul>
             </nav>
@@ -400,7 +405,7 @@
         <div class="grid-layout">
 
             <h1>Montaj și Reparatii Cabine Duș – Profesional și Rapid</h1>
-        <div class="location-badge">Disponibil în: Târgu Mureș și împrejurimi</div>
+            <div class="location-badge">Disponibil în: Târgu Mureș și împrejurimi</div>
             
             <div class="main-info">
                 <h2>Descriere Serviciu</h2>
@@ -414,33 +419,33 @@
                 <table class="price-table">
                     <thead>
                         <tr>
-                            th>Tip Serviciu</th>
+                            <th>Tip Serviciu</th>
                             <th>Preț Estimativ</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            td>Montaj Paravan Duș / Walk-in</td>
+                            <td>Montaj Paravan Duș / Walk-in</td>
                             <td>de la 300 RON</td>
                         </tr>
                         <tr>
-                            td>Montaj Cabină Duș Standard (Pătrată/Semicirculară)</td>
+                            <td>Montaj Cabină Duș Standard (Pătrată/Semicirculară)</td>
                             <td>de la 350 RON</td>
                         </tr>
                         <tr>
-                            td>Montaj Cabină Duș complexă / Hidromasaj</td>
+                            <td>Montaj Cabină Duș complexă / Hidromasaj</td>
                             <td>de la 550 RON</td>
                         </tr>
                         <tr>
-                            td>Demontare Cabină Duș Veche</td>
+                            <td>Demontare Cabină Duș Veche</td>
                             <td>de la 100 RON</td>
                         </tr>
                         <tr>
-                            td>Etanșare completă cu silicon sanitar (refacere)</td>
+                            <td>Etanșare completă cu silicon sanitar (refacere)</td>
                             <td>de la 150 RON</td>
                         </tr>
                         <tr>
-                            td>Reparații / Înlocuire role, garnituri, sifoane scurgere</td>
+                            <td>Reparații / Înlocuire role, garnituri, sifoane scurgere</td>
                             <td>de la 120 RON</td>
                         </tr>
                     </tbody>
@@ -451,9 +456,9 @@
                 <div class="gallery">
                     <p style="font-size: 0.9rem; color: #666;">*Mai jos sunt exemple de cabine montate recent:</p>
                     <div class="gallery-grid">
-                        <img class="gallery-item" src="assets/cabina-dus1.png" alt="Montaj cabina dus">
-                        <img class="gallery-item" src="assets/cabina-dus2.png" alt="Paravan Walk-in">
-                        <img class="gallery-item" src="assets/cabina-dus3.png" alt="Izolatie silicon sanitar">
+                        <img class="gallery-item" src="../assets/cabina-dus1.png" alt="Montaj cabina dus">
+                        <img class="gallery-item" src="../assets/cabina-dus2.png" alt="Paravan Walk-in">
+                        <img class="gallery-item" src="../assets/cabina-dus3.png" alt="Izolatie silicon sanitar">
                     </div>
                 </div>
             </div>
@@ -481,38 +486,110 @@
     </div>
 </div>
 
-<!-- Footer -->
-	<footer id="contact">
-		<div class="container">
-			<div class="footer-grid">
-				<div class="footer-col">
-					<h4>Vali Handyman</h4>
-					<p>Servicii profesionale montaj cabine dus în Târgu Mureș.</p>
-				</div>
-				<div class="footer-col">
-					<h4>Contact</h4>
-					<ul>
-						<li><i class="fa-solid fa-location-dot text-primary"></i> Târgu Mureș, România</li>
-						<li><i class="fa-brands fa-whatsapp text-primary"></i> +40 755 873 335</li>
-						<li><i class="fa-solid fa-envelope text-primary"></i> info@servicii.vali-handyman.com</li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<h4>Linkuri</h4>
-					<ul>
-						<li><a href="index.html#services">Servicii</a></li>
-						<li><a href="index.html">Acasă</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<p>&copy; 2026 Vali Handyman. Toate drepturile rezervate.</p>
-				<a href="https://www.facebook.com/sharer/sharer.php?u=https://servicii.vali-handyman.com/montaj-cabina-dus.html" class="fb-share" aria-label="Distribuie pe Facebook"><i class="fa-brands fa-facebook-f"></i> Distribuie</a>
-			</div>
-		</div>
-	</footer>
-<script src="main.js"></script>
+<footer id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Vali Handyman</h4>
+                <p>Servicii profesionale montaj cabine dus în Târgu Mureș.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot text-primary"></i> Târgu Mureș, România</li>
+                    <li><i class="fa-brands fa-whatsapp text-primary"></i> +40 755 873 335</li>
+                    <li><i class="fa-solid fa-envelope text-primary"></i> info@servicii.vali-handyman.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Linkuri</h4>
+                <ul>
+                    <li><a href="../index.html#services">Servicii</a></li>
+                    <li><a href="../index.html">Acasă</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vali Handyman. Toate drepturile rezervate.</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://servicii.vali-handyman.com/mures/montaj-cabina-dus.html" class="fb-share" aria-label="Distribuie pe Facebook"><i class="fa-brands fa-facebook-f"></i> Distribuie</a>
+        </div>
+    </div>
+</footer>
+<script src="../main.js"></script>
+
+	floating butonn WhatsApp- SE PUNE IN BODY TOT CODUL
+
+<!-- Butonul Plutitor WhatsApp -->
+<a href="https://wa.me/40755873335?text=Bună%20ziua!%20Doresc%20o%20ofertă%20pentru%20servicii%20%20în%20Cluj." class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer">
+  <!-- Iconița WhatsApp (SVG pentru claritate maximă și viteză de încărcare) -->
+  <svg viewBox="0 0 32 32" class="whatsapp-icon">
+    <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.48 2.025 7.79l-2.025 7.41 7.585-1.99c2.324 1.22 4.965 1.91 7.755 1.91 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.375c-2.48 0-4.81-0.645-6.845-1.78l-0.49-0.29-4.52 1.185 1.21-4.415-0.32-0.51c-1.225-1.965-1.93-4.28-1.93-6.765 0-7.375 6-13.375 13.375-13.375s13.375 6 13.375 13.375-6 13.375-13.375 13.375zM22.92 19.385c-0.38-0.19-2.245-1.11-2.595-1.235s-0.605-0.19-0.855 0.19c-0.25 0.38-0.97 1.235-1.19 1.485s-0.44 0.28-0.82 0.095c-0.38-0.19-1.605-0.59-3.055-1.885-1.13-1.01-1.895-2.255-2.115-2.635s-0.025-0.585 0.165-0.77c0.17-0.17 0.38-0.44 0.57-0.665s0.25-0.38 0.38-0.635c0.13-0.25 0.065-0.475-0.03-0.665s-0.855-2.06-1.175-2.83c-0.315-0.75-0.635-0.65-0.855-0.66l-0.73-0.015c-0.25 0-0.665 0.095-1.01 0.475s-1.33 1.3-1.33 3.165c0 1.865 1.36 3.675 1.55 3.93s2.68 4.095 6.49 5.74c0.905 0.395 1.615 0.63 2.165 0.805 0.91 0.29 1.74 0.25 2.395 0.15 0.73-0.11 2.245-0.92 2.56-1.805s0.315-1.645 0.22-1.805c-0.095-0.165-0.35-0.25-0.73-0.44z"/>
+  </svg>
+</a>
+
+<style>
+/* Stilurile pentru butonul plutitor */
+.whatsapp-floating-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* Animație de puls pentru a atrage atenția */
+  animation: pulse-green 2s infinite;
+}
+
+/* Efect de hover (când treci cu mouse-ul peste el) */
+.whatsapp-floating-btn:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+/* Dimensiunea iconiței din interior */
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  fill: white;
+}
+
+/* Definirea animației de puls */
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Adaptare pentru ecrane foarte mici (opțional) */
+@media screen and (max-width: 767px) {
+  .whatsapp-floating-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 55px;
+    height: 55px;
+  }
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+</style>
 
 </body>
 </html>
