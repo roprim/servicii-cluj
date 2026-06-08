@@ -1,1 +1,520 @@
 
+```html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <!-- Meta taguri de bază -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO - Meta descripție și cuvinte cheie -->
+     <link rel="icon" href="assets/favicon-vh.png" type="image/png" alt="Vali Handyman Favicon">
+     <title>Montaj și Reparatii Cabine Duș | Servicii Profesionale Târgu Mureș</title>
+    <meta name="description" content="Servicii profesionale de montaj, reparații și înlocuire cabine duș în Târgu Mureș. Garanție montaj, materiale de etanșare incluse. Disponibil luni-duminică. Apelați acum!">
+    <meta name="keywords" content="montaj cabina dus targu mures, reparații cabine duș, paravan duș targu mures, hidromasaj targu mures, servicii profesionale">
+    <meta name="author" content="Vali Handyman">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Open Graph - Partajare rețele sociale -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://servicii.vali-handyman.ro/montaj-cabina-dus.html">
+    <meta property="og:title" content="Montaj și Reparatii Cabine Duș | Servicii Profesionale Târgu Mureș">
+    <meta property="og:description" content="Montaj profesional cabine duș în Târgu Mureș. Garanție, materiale incluse, disponibilitate 7/7. De la 350 RON. Contactați-ne astazi!">
+    <meta property="og:image" content="https://servicii.vali-handyman.com/assets/cabina-dus1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Vali Handyman">
+    <meta property="og:locale" content="ro_RO">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://servicii.vali-handyman.ro/montaj-cabina-dus.html">
+    <meta name="twitter:title" content="Montaj și Reparatii Cabine Duș | Servicii Profesionale">
+    <meta name="twitter:description" content="Montaj profesional cabine duș în Târgu Mureș cu garanție. Disponibil 7/7.">
+    <meta name="twitter:image" content="https://servicii.vali-handyman.com/assets/cabina-dus1.png">
+    
+    <!-- Canonical URL - Previne duplicate content -->
+    <link rel="canonical" href="https://servicii.vali-handyman.com/mures/montaj-cabina-dus.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon-vh.png">
+    <link rel="apple-touch-icon" href="assets/cabina-dus1.png">
+    
+    <!-- Preconnect pentru performanță -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://via.placeholder.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Styluri CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usznuy8+Qw/oXgUjBoMlQQsyukDObBaI7FFzJpYXjohnjuDiTp9bAApBwq5/Nw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="index.css" media="all">
+    <style>
+        /* Resetare și stiluri globale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #a0bcb3;
+            color: #f4eeee;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #043255;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Header / Secțiunea Principală */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #56bbf5;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: rgb(244, 241, 241);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Conținutul Anunțului */
+        .content {
+            padding: 30px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Secțiunea Stânga: Descriere și Poze */
+        .main-info h2 {
+            color: #0bf74e;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f4f7f6;
+            padding-bottom: 5px;
+        }
+
+        .description {
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Stiluri Tabel Prețuri */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .price-table th, .price-table td {
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 1px solid rgba(244, 238, 238, 0.1);
+        }
+
+        .price-table th {
+            background-color: #12365b;
+            color: #56bbf5;
+            font-weight: 600;
+        }
+
+        .price-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+            color: #0bf74e;
+            white-space: nowrap;
+        }
+
+        .price-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: #94f2c0;
+            margin-top: -20px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        /* Galerie Poze */
+        .gallery {
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 325px;
+            background-color: #8a4b4b;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: bold;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+
+        /* Secțiunea Dreapta: Preț și Detalii/Contact */
+        .sidebar {
+            background-color: #12365b;
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            height: fit-content;
+        }
+
+        .price-box {
+            text-align: center;
+            background: #e6fffa;
+            border: 1px solid #319795;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: #133839;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #234e52;
+        }
+
+        .details-list {
+            list-style: none;
+            margin-bottom: 25px;
+            color: #360395;
+        }
+
+        .details-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #94f2c0;
+            display: flex;
+            align-items: center;
+        }
+
+        .details-list li::before {
+            content: "✓";
+            color: #1a824a;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: #0b753d;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #2f855a;
+        }
+    </style>
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Schema.org JSON-LD - Structurate date pentru motoarele de căutare -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "Vali Handyman - Montaj Cabine Duș",
+      "image": "https://servicii.vali-handyman.com/assets/cabina-dus1.png",
+      "description": "Servicii profesionale de montaj, reparații și înlocuire cabine duș în Târgu Mureș",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Târgu Mureș",
+        "addressLocality": "Târgu Mureș",
+        "addressRegion": "Mureș",
+        "postalCode": "540000",
+        "addressCountry": "RO"
+      },
+      "telephone": "+40755873335",
+      "email": "info@servicii.vali-handyman.com",
+      "url": "https://servicii.vali-handyman.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "350 - 1500 RON",
+      "areaServed": {
+        "@type": "City",
+        "name": "Târgu Mureș"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61590550021513"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD pentru Serviciu -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Montaj și Reparații Cabine Duș",
+      "description": "Servicii profesionale de montaj, reparații și înlocuire cabine duș, paravane și hidromasaje",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Vali Handyman"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Târgu Mureș"
+      },
+      "priceRange": "350 - 1500 RON",
+      "availableLanguage": ["ro"],
+      "serviceType": "Home Repair"
+    }
+    </script>
+
+    <!-- Breadcrumb Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasă",
+          "item": "https://servicii.vali-handyman.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicii",
+          "item": "https://servicii.vali-handyman.com/index.html#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Montaj Cabine Duș",
+          "item": "https://servicii-vali.handyman.com/montaj-cabina-dus.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics (dacă doriți să adăugați tracking) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
+
+    
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VALI <span>Handyman</span></a>
+            <nav aria-label="Navigație Principală">
+                <ul class="nav-links">
+                    <li><a href="index.html#services">Servicii</a></li>
+                    <li><a href="index.html#testimonials">Recenzii</a></li>
+                    <li><a href="index.html#why-us">De ce noi</a></li>
+                    <li><a href="index.html#faq">Întrebări frecvente</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.htmlgallery.html">Galerie</a></li>
+                    <li><a href="https://facebook.com/profile.php?id=61590550021513" target="_blank" aria-label="Vizitați pagina noastră de Facebook"><i class="fa-brands fa-facebook" style="font-size: 1.2rem;"></i></a></li>
+                </ul>
+            </nav>
+            <a href="tel:+40755873335" class="header-phone" aria-label="Sună la +40 755 873 335"><i class="fa-solid fa-phone"></i></a>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="grid-layout">
+
+            <h1>Montaj și Reparatii Cabine Duș – Profesional și Rapid</h1>
+        <div class="location-badge">Disponibil în: Târgu Mureș și împrejurimi</div>
+            
+            <div class="main-info">
+                <h2>Descriere Serviciu</h2>
+                <div class="description">
+                    <p>Ofer servicii profesionale de montaj, înlocuire și reparații pentru orice tip de cabină de duș, walk-in, hidromasaj sau paravan de cadă. Cu o experiență vastă în domeniu, garantez o instalare hidroizolată corect, fără scurgeri de apă și finisaje de înaltă calitate.</p>
+                    <br>
+                    <p>Mă ocup de tot procesul: de la demontarea vechii cabine, pregătirea suprafeței, aplicarea stratului de silicon sanitar anti-mucegai, până la racordarea corectă la rețeaua de apă și scurgere.</p>
+                </div>
+
+                <h2>Prețuri Estimative</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            th>Tip Serviciu</th>
+                            <th>Preț Estimativ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            td>Montaj Paravan Duș / Walk-in</td>
+                            <td>de la 300 RON</td>
+                        </tr>
+                        <tr>
+                            td>Montaj Cabină Duș Standard (Pătrată/Semicirculară)</td>
+                            <td>de la 350 RON</td>
+                        </tr>
+                        <tr>
+                            td>Montaj Cabină Duș complexă / Hidromasaj</td>
+                            <td>de la 550 RON</td>
+                        </tr>
+                        <tr>
+                            td>Demontare Cabină Duș Veche</td>
+                            <td>de la 100 RON</td>
+                        </tr>
+                        <tr>
+                            td>Etanșare completă cu silicon sanitar (refacere)</td>
+                            <td>de la 150 RON</td>
+                        </tr>
+                        <tr>
+                            td>Reparații / Înlocuire role, garnituri, sifoane scurgere</td>
+                            <td>de la 120 RON</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="price-note">*Prețurile finale pot varia în funcție de complexitatea lucrării, starea instalației actuale și materialele necesare.</p>
+
+                <h2>Poze Lucrări (Portofoliu)</h2>
+                <div class="gallery">
+                    <p style="font-size: 0.9rem; color: #666;">*Mai jos sunt exemple de cabine montate recent:</p>
+                    <div class="gallery-grid">
+                        <img class="gallery-item" src="assets/cabina-dus1.png" alt="Montaj cabina dus">
+                        <img class="gallery-item" src="assets/cabina-dus2.png" alt="Paravan Walk-in">
+                        <img class="gallery-item" src="assets/cabina-dus3.png" alt="Izolatie silicon sanitar">
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="price-box">
+                    <div class="price-label">Preț de pornire</div>
+                    <div class="price-value">350 RON</div>
+                </div>
+
+                <h3>Alte Detalii</h3>
+                <br>
+                <ul class="details-list">
+                    <li>Garanție pentru montaj</li>
+                    <li>Unelte profesionale</li>
+                    <li>Materiale de etanșare incluse</li>
+                    <li>Disponibilitate: Luni - Duminică</li>
+                    <li>Curățenie după lucrare</li>
+                </ul>
+
+                <a href="tel:+40755873335" class="cta-button">Sunați pentru Programare</a>
+            </aside>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+	<footer id="contact">
+		<div class="container">
+			<div class="footer-grid">
+				<div class="footer-col">
+					<h4>Vali Handyman</h4>
+					<p>Servicii profesionale montaj cabine dus în Târgu Mureș.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Contact</h4>
+					<ul>
+						<li><i class="fa-solid fa-location-dot text-primary"></i> Târgu Mureș, România</li>
+						<li><i class="fa-brands fa-whatsapp text-primary"></i> +40 755 873 335</li>
+						<li><i class="fa-solid fa-envelope text-primary"></i> info@servicii.vali-handyman.com</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Linkuri</h4>
+					<ul>
+						<li><a href="index.html#services">Servicii</a></li>
+						<li><a href="index.html">Acasă</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2026 Vali Handyman. Toate drepturile rezervate.</p>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=https://servicii.vali-handyman.com/montaj-cabina-dus.html" class="fb-share" aria-label="Distribuie pe Facebook"><i class="fa-brands fa-facebook-f"></i> Distribuie</a>
+			</div>
+		</div>
+	</footer>
+<script src="main.js"></script>
+
+</body>
+</html>
+
+```
