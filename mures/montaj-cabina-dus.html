@@ -218,6 +218,45 @@
         .cta-button:hover {
             background-color: #2f855a;
         }
+
+		@media (max-width: 768px) {
+    /* Dezactivăm comportamentul clasic de tabel */
+    .price-table {
+        min-width: 100% !important;
+    }
+    
+    .price-table thead {
+        display: none; /* Ascundem capul de tabel pe mobil */
+    }
+
+    .price-table tbody, 
+    .price-table tr, 
+    .price-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .price-table tr {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(244, 238, 238, 0.1);
+    }
+
+    /* Primul TD (Numele serviciului) */
+    .price-table td:first-child {
+        padding: 0 0 4px 0;
+        text-align: left;
+        font-size: 1rem;
+        color: #f4eeee;
+    }
+
+    /* Al doilea TD (Prețul) - Coboară automat și se duce în dreapta */
+    .price-table td:last-child {
+        padding: 0;
+        text-align: right !important; /* Îl împinge în marginea din dreapta */
+        font-size: 1.05rem;
+        color: #0bf74e;
+        margin-top: 2px; /* Mică distanță sub text */
+    }
     </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
