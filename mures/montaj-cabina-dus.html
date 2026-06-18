@@ -37,8 +37,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://via.placeholder.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">  
+	
+    /* Resetare */
+	
+	<link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="index.css"></noscript>
+
+	<link rel="preload" href="ruta-catre-font-awesome.woff2" as="font" type="font/woff2" crossorigin>
+	<script src="app.js" defer></script>
+	
+    /* Resetare */
+	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="../index.css" media="all">
     <style>
@@ -257,6 +267,13 @@
         color: #0bf74e;
         margin-top: 2px; /* Mică distanță sub text */
     }
+
+    .sectiune-de-jos {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px; /* aproximează înălțimea secțiunii */
+}
+
+			
     </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
